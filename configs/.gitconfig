@@ -41,7 +41,7 @@
 [protocol]
 	version = 2
 [core]
-	# excludesfile = ~/.dotfiles/gitignore
+	excludesfile = ~/.dotfiles/gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = code --wait
 
