@@ -11,3 +11,6 @@ set background=dark
 set t_Co=256
 set t_ut=
 @REM colorscheme codedark
+let g:solarized_termcolors=256
+colorscheme solarized
+hi Normal ctermbg=none
