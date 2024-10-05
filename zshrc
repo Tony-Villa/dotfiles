@@ -1,3 +1,7 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/tonyvilla/completions:"* ]]; then export FPATH="/Users/tonyvilla/completions:$FPATH"; fi
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/tonyvilla/.zsh/completions:"* ]]; then export FPATH="/Users/tonyvilla/.zsh/completions:$FPATH"; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -111,3 +115,26 @@ zle -N bracketed-paste bracketed-paste-magic
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# fnm
+export PATH="/Users/tonyvilla/Library/Application Support/fnm:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="/Users/tonyvilla/Library/Android/sdk/platform-tools:$PATH"
+eval "`fnm env`"
+
+# bun completions
+[ -s "/Users/tonyvilla/.bun/_bun" ] && source "/Users/tonyvilla/.bun/_bun"
+
+
+#starship
+eval "$(starship init zsh)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH=$PATH:/Users/tonyvilla/go/bin
+
+
+. "/Users/tonyvilla/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
