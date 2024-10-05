@@ -1,7 +1,14 @@
 [user]
-	name = Jonathan Grimes
-	email = jsg2021@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDbn8X8OGnCZYxq9J8aiK6whgLIq8s1h9v5uEGGuargP
+	name = Tony-Villa
+	email = tonyvilla77@gmail.com
+	# signingkey = sshkeygoeshere
+# [gpg]
+# 	format = ssh
+# [gpg "ssh"]
+# 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+# [commit]
+# 	template = ~/.dotfiles/gitcommit_template
+# 	gpgsign = true
 
 [credential "https://github.com"]
 	helper = !gh auth git-credential
@@ -32,37 +39,6 @@
 
 [url "file://"]
 	insteadOf = git+file://
-
-
-# ==================
-
-[init]
-	defaultBranch = main
-[protocol]
-	version = 2
-[core]
-	excludesfile = ~/.dotfiles/gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX
-	editor = code --wait
-
-[url "file://"]
-	insteadOf = git+file://
-[credential "https://github.com"]
-	helper = !gh auth git-credential
-
-[user]
-	name = Tony-Villa
-	email = tonyvilla77@gmail.com
-	# signingkey = sshkeygoeshere
-# [gpg]
-# 	format = ssh
-# [gpg "ssh"]
-# 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-# [commit]
-# 	template = ~/.dotfiles/gitcommit_template
-# 	gpgsign = true
-
-# ========================
 
 [pull]
 	rebase = true
